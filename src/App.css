@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'DM Sans', sans-serif;
+  color: #243c30;
+  background: #f5f7f0;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 55px 20px;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at top left, #e3eedf 0%, transparent 45%),
+    radial-gradient(ellipse at bottom right, #e8eee0 0%, transparent 40%),
+    #f7f8f3;
+}
+
+.decoration {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decoration-one {
+  width: 260px;
+  height: 260px;
+  top: -100px;
+  right: -70px;
+  background: #dce9d5;
+  opacity: 0.65;
+}
+
+.decoration-two {
+  width: 200px;
+  height: 200px;
+  bottom: -80px;
+  left: -50px;
+  background: #e3ebd9;
+  opacity: 0.8;
+}
+
+.app-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 620px;
+  padding: 44px 46px 25px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid #e8ede4;
+  border-radius: 25px;
+  box-shadow: 0 24px 70px rgba(42, 69, 48, 0.10);
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 34px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 18px;
+  border-radius: 21px;
+  background: #eaf2e5;
+  font-size: 31px;
+  box-shadow: 0 6px 18px rgba(55, 91, 59, 0.08);
+}
+
+.subtitle {
+  color: #759071;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+
+.header h1 {
+  margin: 12px 0 10px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(30px, 5vw, 39px);
+  line-height: 1.2;
+  letter-spacing: -1px;
+  color: #243c30;
+}
+
+.header h1 span {
+  color: #5c8b58;
+}
+
+.header > p {
+  margin: 0;
+  color: #8b968b;
+  font-size: 14px;
+}
+
+.input-section {
+  padding: 23px;
+  border: 1px solid #e9eee5;
+  border-radius: 16px;
+  background: #fafbf8;
+}
+
+.input-section label {
+  display: block;
+  margin-bottom: 11px;
+  color: #3a5140;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+.input-group input {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  color: #263e30;
+  background: #fff;
+  border: 1px solid #e1e8dc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 13px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input-group input::placeholder {
+  color: #a8b1a6;
+}
+
+.input-group input:focus {
+  border-color: #7da779;
+  box-shadow: 0 0 0 3px rgba(100, 146, 93, 0.12);
+}
+
+.add-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 0 17px;
+  color: white;
+  background: #477a4b;
+  border: 0;
+  border-radius: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.add-button span {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.add-button:hover {
+  background: #35653a;
+  transform: translateY(-1px);
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin: 32px 0 17px;
+}
+
+.list-header h2 {
+  margin: 0 0 5px;
+  color: #2c4333;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 23px;
+}
+
+.list-header p {
+  margin: 0;
+  color: #929b90;
+  font-size: 11px;
+}
+
+.counter {
+  padding: 8px 12px;
+  color: #477a4b;
+  background: #edf4e9;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.empty-state {
+  padding: 28px 15px 32px;
+  text-align: center;
+  border: 1px dashed #dce5d7;
+  border-radius: 15px;
+  background: #fcfdfb;
+}
+
+.empty-icon {
+  margin-bottom: 12px;
+  font-size: 34px;
+}
+
+.empty-state h3 {
+  margin: 0 0 7px;
+  color: #526a54;
+  font-size: 14px;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #99a198;
+  font-size: 12px;
+}
+
+.courses-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.course-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 14px;
+  background: #fbfcf9;
+  border: 1px solid #edf0e9;
+  border-radius: 12px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.course-item:hover {
+  border-color: #d5e3cf;
+  transform: translateY(-1px);
+}
+
+.item-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.item-icon {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 27px;
+  height: 27px;
+  color: #4b8050;
+  background: #e8f1e4;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.item-name {
+  overflow-wrap: anywhere;
+  color: #3c5140;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.delete-button {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  background: #fff0ed;
+  border: 0;
+  border-radius: 9px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.delete-button:hover {
+  background: #ffdfd9;
+  transform: scale(1.05);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+  padding-top: 19px;
+  border-top: 1px solid #edf0e9;
+}
+
+.footer span {
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+  color: #9aa396;
+  font-size: 10px;
+  text-align: center;
+}
+
+@media (max-width: 520px) {
+  .page {
+    padding: 25px 13px;
+  }
+
+  .app-card {
+    padding: 30px 19px 22px;
+    border-radius: 20px;
+  }
+
+  .header {
+    padding-bottom: 27px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .input-section {
+    padding: 16px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .add-button {
+    min-height: 45px;
+  }
+
+  .list-header h2 {
+    font-size: 21px;
+  }
+}
+
